@@ -32,5 +32,6 @@ module.exports = defineConfig({
   },
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
+    'vue/multi-word-component-names': 'off',
   },
 });
