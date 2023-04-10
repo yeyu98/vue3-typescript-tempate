@@ -95,3 +95,10 @@ rules: 自定义一些规则生效与否或自定义规则
 prettier -- 生效
 eslint-config-prettier: 解决与eslint的冲突 （eslint 也有部分代码格式的功能，因此需要解决两者的冲突）
 eslint-plugin-prettier：解决与eslint的冲突
+
+
+
+### 问题汇总
+- 引入path模块时找不到模块“path”或其相应的类型声明
+  - 原因： 
+  - 解决方法：安装 pnpm install @types/node --save-dev 
