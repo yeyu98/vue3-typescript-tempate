@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "npm run dev",
+    "dev": "vite --host",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint:css": "stylelint src/**/*.less --fix  --custom-syntax postcss-less",

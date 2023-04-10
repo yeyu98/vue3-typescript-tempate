@@ -1,16 +1,30 @@
+<!--
+ * @Author: xiaohu
+ * @Date: 2023-04-10 14:13:14
+ * @LastEditors: xiaohu
+ * @LastEditTime: 2023-04-10 15:17:00
+ * @FilePath: \vue3-typescript-tempate\src\components\HelloWorld.vue
+ * @Description:
+-->
 <script setup lang="ts">
-import { ref } from 'vue';
+import { useCounter } from '@/stores/index';
 
 defineProps<{ msg: string }>();
 
-const count = ref(0);
+const counterStore = useCounter();
+
+const handleClick = () => {
+  let count = counterStore.counter;
+  count++;
+  counterStore.setCounter(count);
+};
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <button type="button" @click="handleClick">count is {{ counterStore.counter }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR

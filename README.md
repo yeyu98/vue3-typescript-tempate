@@ -1,8 +1,8 @@
 <!--
  * @Author: lzy-Jerry
  * @Date: 2023-03-20 22:12:44
- * @LastEditors: lzy-Jerry
- * @LastEditTime: 2023-03-22 22:30:32
+ * @LastEditors: xiaohu
+ * @LastEditTime: 2023-04-10 15:16:19
  * @Description: 
 -->
 ## 配置jsx/tsx
@@ -99,6 +99,9 @@ eslint-plugin-prettier：解决与eslint的冲突
 
 
 ### 问题汇总
-- 引入path模块时找不到模块“path”或其相应的类型声明
+- 引入path模块时找不到模块“path”或其相应的类型声明ts
   - 原因： 
   - 解决方法：安装 pnpm install @types/node --save-dev 
+- 配置别名@之后导入时会报找不到模块ts
+  - 原因：在配置别名之后ts确实不知道@表示的是啥，因此需要在tsconfig中配置paths
+  - 解决方法：在tsconfig中配置paths: {"@/*": ["src/*"]},这里的src需要配置baseUrl: '.'
