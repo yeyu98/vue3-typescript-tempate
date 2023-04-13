@@ -37,6 +37,15 @@ class Request {
   post<T>(url: string, data = {}, options = {}): Promise<AxiosResponse<T>> {
     return this.service.post(url, data, options).then((res: AxiosResponse<T>) => res);
   }
+  patch<T>(url: string, data = {}, options = {}): Promise<AxiosResponse<T>> {
+    return this.service.patch(url, data, options).then((res: AxiosResponse<T>) => res);
+  }
+  put<T>(url: string, data = {}, options = {}): Promise<AxiosResponse<T>> {
+    return this.service.put(url, data, options).then((res: AxiosResponse<T>) => res);
+  }
+  delete<T>(url: string, options = {}): Promise<AxiosResponse<T>> {
+    return this.service.get(url, options).then((res: AxiosResponse<T>) => res);
+  }
 }
 
 const request = new Request();
