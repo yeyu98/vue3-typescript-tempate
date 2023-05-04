@@ -2,7 +2,7 @@
  * @Author: lzy-Jerry
  * @Date: 2023-03-20 22:12:44
  * @LastEditors: xiaohu
- * @LastEditTime: 2023-04-10 16:17:15
+ * @LastEditTime: 2023-05-04 11:12:31
  * @Description:
  */
 import { defineConfig } from 'vite';
@@ -28,6 +28,7 @@ export default defineConfig({
   server: {
     port: 8080,
     open: true,
+    host: '0.0.0.0',
     proxy: {
       // "/api": {
       //   target: "http://xxx.com",
